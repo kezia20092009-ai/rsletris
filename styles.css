@@ -1,0 +1,164 @@
+/* ──────────────────────────────────────────────────────
+   COLOR PALETTE (as CSS custom properties)
+   ────────────────────────────────────────────────────── */
+:root {
+  /* Modern – a fresh cyan */
+  --color-modern: #00E5FF;
+
+  /* Dark green – a deep, medical green */
+  --color-dark-green: #1B4D3E;
+
+  /* Lo‑fi – warm, muted cream */
+  --color-lofi: #F5F0E6;
+
+  /* Japanese red – classic accent */
+  --color-japanese: #D32F2F;
+
+  /* Text & neutral */
+  --color-text: #333333;
+  --color-white: #ffffff;
+}
+
+/* ──────────────────────────────────────────────────────
+   BASE STYLES
+   ────────────────────────────────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-lofi);   /* lo‑fi background */
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* ──────────────────────────────────────────────────────
+   HEADER
+   ────────────────────────────────────────────────────── */
+header {
+  background-color: var(--color-dark-green);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+header nav a {
+  color: var(--color-white);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: var(--color-modern);   /* modern accent on hover */
+}
+
+/* ──────────────────────────────────────────────────────
+   HERO SECTION
+   ────────────────────────────────────────────────────── */
+#hero {
+  background: linear-gradient(135deg, var(--color-dark-green) 0%, #0f2f26 100%);
+  color: var(--color-white);
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Button – Japanese red */
+.btn {
+  background-color: var(--color-japanese);
+  color: var(--color-white);
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background-color: #b71c1c;   /* slightly darker Japanese red */
+}
+
+/* ──────────────────────────────────────────────────────
+   SERVICES
+   ────────────────────────────────────────────────────── */
+#about {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#about h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-dark-green);
+}
+#services {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#services h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-dark-green);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: var(--color-white);
+  border-left: 5px solid var(--color-modern);   /* modern accent */
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.service-card h3 {
+  color: var(--color-dark-green);
+  margin-bottom: 0.5rem;
+}
+
+/* ──────────────────────────────────────────────────────
+   CONTACT SECTION
+   ────────────────────────────────────────────────────── */
+#contact {
+  background-color: var(--color-white);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+#contact h2 {
+  color: var(--color-dark-green);
+  margin-bottom: 1rem;
+}
+
+/* ──────────────────────────────────────────────────────
+   FOOTER
+   ────────────────────────────────────────────────────── */
+footer {
+  background-color: var(--color-dark-green);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
